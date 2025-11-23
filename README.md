@@ -52,7 +52,7 @@ Ensure you have the following installed on your machine:
 Open your terminal or command prompt and run:
 
 ```bash
-git clone https://github.com/your-username/trivion-ai-fitness.git
+git clone https://github.com/Sravan2510/trivion-ai-fitness.git
 cd trivion-ai-fitness
 ```
 
