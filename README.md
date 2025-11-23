@@ -112,5 +112,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 5.  Open a Pull Request
 
 ---
-
-*Prototype Build v1.3*
