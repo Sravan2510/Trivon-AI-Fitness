@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivion Gym</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              zinc: {
+                850: '#1f1f22',
+                900: '#18181b',
+                950: '#09090b',
+              },
+              apple: {
+                blue: '#0A84FF',
+                green: '#30D158',
+                indigo: '#5E5CE6',
+                orange: '#FF9F0A',
+                red: '#FF453A',
+                gray: '#8E8E93',
+                card: 'rgba(28, 28, 30, 0.6)',
+              }
+            },
+            fontFamily: {
+              sans: ['-apple-system', 'BlinkMacSystemFont', 'Inter', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'slide-up': 'slideUp 0.4s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --bg-main: #000000;
+        --text-main: #f5f5f7;
+        --glass-bg: rgba(30, 30, 30, 0.4);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --panel-bg: rgba(28, 28, 30, 0.5);
+      }
+
+      body {
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        transition: background-color 0.3s, color 0.3s;
+      }
+      
+      /* Light Mode Overrides */
+      body.light-mode {
+        --bg-main: #f2f2f7;
+        --text-main: #1c1c1e;
+        --glass-bg: rgba(255, 255, 255, 0.7);
+        --glass-border: rgba(0, 0, 0, 0.1);
+        --panel-bg: rgba(255, 255, 255, 0.8);
+      }
+
+      body.light-mode .text-white { color: #1c1c1e !important; }
+      body.light-mode .text-zinc-300 { color: #3a3a3c !important; }
+      body.light-mode .text-zinc-400 { color: #636366 !important; }
+      body.light-mode .text-zinc-500 { color: #8e8e93 !important; }
+      body.light-mode .bg-black { background-color: #f2f2f7 !important; }
+      body.light-mode .bg-zinc-900 { background-color: #ffffff !important; }
+      body.light-mode .bg-zinc-800 { background-color: #e5e5ea !important; }
+      body.light-mode .border-white\/10 { border-color: rgba(0,0,0,0.1) !important; }
+      body.light-mode .border-white\/5 { border-color: rgba(0,0,0,0.05) !important; }
+      
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+      .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+      }
+      .glass-panel {
+        background: var(--panel-bg);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react": "https://esm.sh/react@18.2.0",
+    "recharts": "https://esm.sh/recharts"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
